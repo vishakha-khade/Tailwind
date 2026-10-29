@@ -3,105 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="bg-slate-100">
+
+    <!-- MAIN CONTAINER -->
     <div class="flex">
-      <div class="bg-sky-900 h-screen w-60">
-        <div class="flex bg-gray-700">
-            <div class="m-5 mt-6" ><img src="./assets/dashboard-icon.png" alt="Dashboard-img" class="h-15 w-20"></div>
-            <div class="bg-gray-700 text-white h-20 w-60 pt-6 m-2 rounded-lg">
-            Dashboard
+
+      <!-- 1. SIDEBAR -->
+      <div class="bg-sky-900 w-60 min-h-screen text-slate-200">
+        
+        <!-- Logo Header -->
+        <div class="flex items-center gap-3 p-4 bg-slate-800 mb-6">
+          <img src="./assets/dashboard-icon.png" alt="Logo" class="h-8 w-8">
+          <h1 class="text-xl font-bold text-white">Dashboard</h1>
         </div>
 
-        </div>
-        
-        <div class="flex gap-2 m-2">
-            <div ><img src="././assets/dashboard-icon.png " class="h-8"/></div>
-             <div>Dashboard Ui </div>
-        </div>
-        <div>
-            <div class="flex gap-2 m-2 ">
-            <div><img src="././assets/user.jpg " class="h-8 bg--200"/></div>
-             <div>Users </div>
-        </div>
-        <div class="flex gap-2 m-2">
-            <div ><img src="././assets/products.png " class="h-8"/></div>
-             <div>Products</div>
-        </div>
-        <div class="flex gap-2 m-2">
-            <div ><img src="././assets/bag.png " class="h-8"/></div>
-             <div>Card</div>
-        </div>
-        <div class="flex gap-2 m-2">
-            <div ><img src="././assets/shopping.png " class="h-8"/></div>
-             <div>Shopping</div>
+        <!-- Sidebar Navigation Menu -->
+        <div class="flex flex-col gap-2 px-4">
+          
+          <div class="flex items-center gap-3 p-3 bg-slate-800 text-white rounded cursor-pointer">
+            <img src="./assets/dashboard-icon.png" alt="Dashboard" class="h-6 w-6">
+            <span>Dashboard Ui</span>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded cursor-pointer">
+            <img src="./assets/user.jpg" alt="Users" class="h-6 w-6 rounded-full">
+            <span>Users</span>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded cursor-pointer">
+            <img src="./assets/products.png" alt="Products" class="h-6 w-6">
+            <span>Products</span>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded cursor-pointer">
+            <img src="./assets/card.png" alt="Card" class="h-6 w-6">
+            <span>Card</span>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 hover:bg-slate-800 rounded cursor-pointer">
+            <img src="./assets/electronics.png" alt="Shopping" class="h-6 w-6">
+            <span>Electronic
+              items
+            </span>
+          </div>
+
         </div>
       </div>
-    </div>
-    <div>
-    <div class="flex gap-4 ">
-        <div class="flex pl-2 pt-2 border w-80 m-4 border rounded h-10 ">
-            <img src="./assets/search.png" alt="search" class="h-6 mr-2">
-            <button class="text-gray-400 mb-6">search</button>
-        </div>
-        <div>
-        <img src="./assets/notify.png" class="p-4 ml-100"/>
-        </div>
-        <div>
-         <img src="./assets/user.jpg" />
-        </div>
-        
-    </div>
 
-    <div class="m-4">Dashboard</div>
-    <div class="flex">
-        <div class="bg-gray-200 w-80 m-4 flex border rounded">
-        <div><img src="./assets/users.png" alt="users-img" class="bg-sky-500 border rounded-3xl m-2"></div>
-        <div>
-            <p>8,283</p>
-            <span class="text-gray-700">New Users</span>
-        </div>
-        
-    </div>
-    <div class="bg-gray-200 w-80 m-4 flex border rounded">
-        <div><img src="./assets/users.png" alt="users-img" class="bg-sky-500 border rounded-3xl m-2"></div>
-        <div>
-            <p>200,533</p>
-            <span class="text-gray-700">Total Orders</span>
-        </div>
-        
-    </div>
-    <div class="bg-gray-200 w-80 m-4 flex border rounded">
-        <div><img src="./assets/shopping.png" alt="users-img" class="bg-pink-400 border rounded-3xl m-2 content-center"></div>
-        <div>
-            <p>215,542</p>
-            <span class="text-gray-700">Available Products</span>
-        </div>
-        
-    </div>
-    </div>
 
-    <div class="bg-gray-300 h-fit p-4 rounded">
-        <div class="flex justify-around bg-gray-200 shadow">
-            <div>Name</div>
-            <div>Title</div>
-            <div>Orders</div>
-            <div>Stocks</div>
+      <!-- 2. MAIN CONTENT AREA -->
+      <div class="flex-1">
+
+        <!-- TOP NAVBAR -->
+        <div class="bg-white p-4 flex justify-between items-center border-b border-gray-300">
+          
+          <!-- Search Box -->
+          <div class="flex items-center border border-gray-300 rounded px-3 py-1.5 w-72">
+            <img src="./assets/search.png" alt="Search" class="h-5 w-5 mr-2">
+            <input type="text" placeholder="Search..." class="outline-none text-sm w-full">
+          </div>
+
+          <!-- Top Right Icons -->
+          <div class="flex items-center gap-4">
+            <img src="./assets/notify.png" alt="Notifications" class="h-6 w-6 cursor-pointer">
+            <img src="./assets/user.jpg" alt="Profile" class="h-8 w-8 rounded-full border border-gray-300">
+          </div>
+
         </div>
-        <div class="flex justify-around bg-white p-4 shadow">
-            <div>
-                Mobile
+
+        <!-- PAGE BODY CONTENT -->
+        <div class="p-6">
+          
+          <h2 class="text-2xl font-bold mb-6 text-gray-800">Dashboard</h2>
+
+          <!-- CARDS CONTAINER -->
+          <div class="flex gap-6 mb-8">
+
+            <!-- Card 1 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-300 flex items-center gap-4 w-64 shadow-sm">
+              <div class="bg-sky-500 p-3 rounded-full">
+                <img src="./assets/users.png" alt="Users" class="h-6 w-6">
+              </div>
+              <div>
+                <p class="text-xl font-bold">8,283</p>
+                <p class="text-gray-500 text-sm">New Users</p>
+              </div>
             </div>
-            <div>Electronics</div>
-            <div>2,847</div>
-            <div>10,000</div>
-        </div>
-        
-    </div>
 
-</div>
+            <!-- Card 2 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-300 flex items-center gap-4 w-64 shadow-sm">
+              <div class="bg-sky-500 p-3 rounded-full">
+                <img src="./assets/users.png" alt="Orders" class="h-6 w-6">
+              </div>
+              <div>
+                <p class="text-xl font-bold">200,533</p>
+                <p class="text-gray-500 text-sm">Total Orders</p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white p-4 rounded-lg border border-gray-300 flex items-center gap-4 w-64 shadow-sm">
+              <div class="bg-pink-400 p-3 rounded-full">
+                <img src="./assets/shopping.png" alt="Products" class="h-6 w-6">
+              </div>
+              <div>
+                <p class="text-xl font-bold">215,542</p>
+                <p class="text-gray-500 text-sm">Available Products</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- DATA TABLE -->
+         <!-- DATA TABLE -->
+          <div class="bg-white rounded-lg border border-gray-300 shadow-sm overflow-hidden">
+            <table class="w-full text-left">
+              <thead class="bg-gray-200 text-gray-700">
+                <tr>
+                  <th class="p-4">Name</th>
+                  <th class="p-4">Title</th>
+                  <th class="p-4">Orders</th>
+                  <th class="p-4">Stocks</th>
+                </tr>
+              </thead>
+              <tbody class="text-gray-600">
+                <!-- Row 1 -->
+                <tr class="border-t border-gray-200 hover:bg-gray-50">
+                  <td class="p-4">Mobile</td>
+                  <td class="p-4">Electronics</td>
+                  <td class="p-4">2,847</td>
+                  <td class="p-4">10,000</td>
+                </tr>
+                <!-- Row 2 -->
+                <tr class="border-t border-gray-200 hover:bg-gray-50">
+                  <td class="p-4">Laptop</td>
+                  <td class="p-4">Electronics</td>
+                  <td class="p-4">1,420</td>
+                  <td class="p-4">4,500</td>
+                </tr>
+                <!-- Row 3 -->
+                <tr class="border-t border-gray-200 hover:bg-gray-50">
+                  <td class="p-4">Wireless Headphones</td>
+                  <td class="p-4">Electronics</td>
+                  <td class="p-4">3,910</td>
+                  <td class="p-4">8,200</td>
+                </tr>
+                <!-- Row 4 -->
+                <tr class="border-t border-gray-200 hover:bg-gray-50">
+                  <td class="p-4">Smart Watch</td>
+                  <td class="p-4">Electronics</td>
+                  <td class="p-4">2,150</td>
+                  <td class="p-4">6,000</td>
+                </tr>
+                <!-- Row 5 -->
+                <tr class="border-t border-gray-200 hover:bg-gray-50">
+                  <td class="p-4">Tablet</td>
+                  <td class="p-4">Electronics</td>
+                  <td class="p-4">980</td>
+                  <td class="p-4">3,100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </body>
 </html>
